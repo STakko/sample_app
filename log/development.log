@@ -122,3 +122,259 @@ Processing by TodolistsController#new as HTML
 Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/todolists" for ::1 at 2021-10-10 17:37:56 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+  
+ActionController::RoutingError (uninitialized constant TodokistsController):
+  
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `const_get'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:283:in `block in constantize'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `each'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `inject'
+activesupport (5.2.6) lib/active_support/inflector/methods.rb:281:in `constantize'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (5.2.6) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:46:in `controller'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:52:in `block in serve'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `each'
+actionpack (5.2.6) lib/action_dispatch/journey/router.rb:35:in `serve'
+actionpack (5.2.6) lib/action_dispatch/routing/route_set.rb:840:in `call'
+rack (2.2.3) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.3) lib/rack/etag.rb:27:in `call'
+rack (2.2.3) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.3) lib/rack/head.rb:12:in `call'
+actionpack (5.2.6) lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+rack (2.2.3) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.3) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/cookies.rb:670:in `call'
+activerecord (5.2.6) lib/active_record/migration.rb:559:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.6) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.6) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-10 17:40:11 +0900
+Processing by TodolistsController#index as HTML
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 257ms (Views: 251.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-10 17:41:43 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (46.3ms)
+Completed 200 OK in 93ms (Views: 87.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/todolists" for ::1 at 2021-10-10 17:42:11 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEPay7p/Essr8yLSmsjmxaLREnv0TVQquA5DNFnSXcsokd7XjSeFEp2BeMvuikvRHi9/xj3+jDO9EXYb5shMRQ==", "list"=>{"title"=>"プログラミング学習", "body"=>"プログラミング学習"}, "commit"=>"投稿"}
+Completed 500 Internal Server Error in 117ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `title' for #<TodolistsController:0x000001bcf5c76b00>):
+  
+app/controllers/todolists_controller.rb:18:in `list_params'
+app/controllers/todolists_controller.rb:7:in `create'
+Started POST "/todolists" for ::1 at 2021-10-10 17:43:22 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yEPay7p/Essr8yLSmsjmxaLREnv0TVQquA5DNFnSXcsokd7XjSeFEp2BeMvuikvRHi9/xj3+jDO9EXYb5shMRQ==", "list"=>{"title"=>"プログラミング学習", "body"=>"プログラミング学習"}, "commit"=>"投稿"}
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[36mList Create (1.0ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "プログラミング学習"], ["body", "プログラミング学習"], ["created_at", "2021-10-10 08:43:22.186741"], ["updated_at", "2021-10-10 08:43:22.186741"]]
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[35m (8.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+Redirected to http://localhost:3000/top
+Completed 302 Found in 26ms (ActiveRecord: 12.6ms)
+
+
+Started GET "/top" for ::1 at 2021-10-10 17:43:22 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/top/new" for ::1 at 2021-10-10 17:43:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/top/new"):
+  
+actionpack (5.2.6) lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.6) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.6) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.6) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.6) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.6) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.6) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists/new" for ::1 at 2021-10-10 17:44:29 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 38ms (Views: 35.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/todolists" for ::1 at 2021-10-10 17:44:49 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ifAjLVSLMO46sdRnUjGj4Jia3Qm0dqD16rVbpuSUwwBpIicxY9OnN4zDjn4mcw70JGSwtH3FeOzvqm6JW47Sjg==", "list"=>{"title"=>"プログラミング学習2", "body"=>"プログラミング学習２"}, "commit"=>"投稿"}
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[36mList Create (5.0ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "プログラミング学習2"], ["body", "プログラミング学習２"], ["created_at", "2021-10-10 08:44:49.701922"], ["updated_at", "2021-10-10 08:44:49.701922"]]
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[35m (6.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+Redirected to http://localhost:3000/top
+Completed 302 Found in 16ms (ActiveRecord: 11.1ms)
+
+
+Started GET "/top" for ::1 at 2021-10-10 17:44:49 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 39ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todolists" for ::1 at 2021-10-10 17:46:18 +0900
+Processing by TodolistsController#index as HTML
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (48.2ms)
+Completed 200 OK in 96ms (Views: 91.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/todolists/1" for ::1 at 2021-10-10 17:56:56 +0900
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:17
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 46ms (Views: 35.9ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/todolists" for ::1 at 2021-10-10 17:59:03 +0900
+Processing by TodolistsController#index as HTML
+  Rendering todolists/index.html.erb within layouts/application
+  Rendered todolists/index.html.erb within layouts/application (5.1ms)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (C:/Users/taiki/Desktop/sample_app/app/views/todolists/index.html.erb:4: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+...itle, "/todolists/#{list.id}" );@output_buffer.safe_append='...
+...                              ^
+C:/Users/taiki/Desktop/sample_app/app/views/todolists/index.html.erb:5: syntax error, unexpected end, expecting ')'
+...er.safe_append='  '.freeze; end ;
+...                            ^~~
+C:/Users/taiki/Desktop/sample_app/app/views/todolists/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+          ensure
+          ^~~~~~
+C:/Users/taiki/Desktop/sample_app/app/views/todolists/index.html.erb:9: syntax error, unexpected end, expecting ')'
+          end
+          ^~~):
+  
+app/views/todolists/index.html.erb:4: syntax error, unexpected ')', expecting '.' or &. or :: or '['
+app/views/todolists/index.html.erb:5: syntax error, unexpected end, expecting ')'
+app/views/todolists/index.html.erb:7: syntax error, unexpected ensure, expecting ')'
+app/views/todolists/index.html.erb:9: syntax error, unexpected end, expecting ')'
+Started GET "/todolists" for ::1 at 2021-10-10 17:59:48 +0900
+Processing by TodolistsController#index as HTML
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 40ms (Views: 37.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/todolists" for ::1 at 2021-10-10 18:04:12 +0900
+Processing by TodolistsController#index as HTML
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (1.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 61ms (Views: 57.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-10 18:06:10 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 46ms (Views: 36.2ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/todolists" for ::1 at 2021-10-10 18:06:59 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lcbIY35pVUaMS2s37Gwp0tscJEoTb3OMWMIOdWLK93R1FMx/STHCnzo5MS6YLoTGZ+JJ99rcq5Vd3Tta3dDm+g==", "list"=>{"title"=>"投稿すると", "body"=>"詳細ページに移動します"}, "commit"=>"投稿"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[36mList Create (4.8ms)[0m  [1m[32mINSERT INTO "lists" ("title", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "投稿すると"], ["body", "詳細ページに移動します"], ["created_at", "2021-10-10 09:06:59.097401"], ["updated_at", "2021-10-10 09:06:59.097401"]]
+  ↳ app/controllers/todolists_controller.rb:8
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:8
+Redirected to http://localhost:3000/todolists/3
+Completed 302 Found in 18ms (ActiveRecord: 15.3ms)
+
+
+Started GET "/todolists/3" for ::1 at 2021-10-10 18:06:59 +0900
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT  "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:17
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
