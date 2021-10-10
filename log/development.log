@@ -46,3 +46,79 @@ Migrating to CreateLists (20211010063445)
   ↳ bin/rails:4
   [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   ↳ bin/rails:4
+Started GET "/" for ::1 at 2021-10-10 16:52:46 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (2.1ms)
+Completed 200 OK in 16ms (Views: 7.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-10 16:54:09 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (100.6ms)
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 2.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `from_with' for #<#<Class:0x000002384886af60>:0x0000023848869638>
+Did you mean?  form_with):
+    1: <h1>新規投稿</h1>
+    2: <%= from_with model: @list, url:'todolists', local:true do |f| %>
+    3:   <h4>タイトル</h4>
+    4:   <%= f.text_field :title %>
+    5:   <h4>本文</h4>
+  
+app/views/todolists/new.html.erb:2:in `_app_views_todolists_new_html_erb__598936729_1220379106320'
+Started GET "/todolists/new" for ::1 at 2021-10-10 16:56:26 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (107.8ms)
+Completed 500 Internal Server Error in 129ms (ActiveRecord: 0.8ms)
+
+
+  
+ActionView::Template::Error (undefined method `from_with' for #<#<Class:0x000001abb5c4cdb0>:0x000001abb5c9f858>
+Did you mean?  form_with):
+    1: <h1>新規投稿</h1>
+    2: <%= from_with model: @list, url:'/todolists', local:true do |f| %>
+    3:   <h4>タイトル</h4>
+    4:   <%= f.text_field :title %>
+    5:   <h4>本文</h4>
+  
+app/views/todolists/new.html.erb:2:in `_app_views_todolists_new_html_erb__79066451_918500308560'
+Started GET "/todolists/new" for ::1 at 2021-10-10 16:56:57 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (103.3ms)
+Completed 500 Internal Server Error in 111ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionView::Template::Error (undefined method `from_with' for #<#<Class:0x000001abb5c4cdb0>:0x000001abb55a27a8>
+Did you mean?  form_with):
+    1: <h1>新規投稿</h1>
+    2: <%= from_with model: @list, url:'/todolists', local:true do |f| %>
+    3:   <h4>タイトル</h4>
+    4:   <%= f.text_field :title %>
+    5:   <h4>本文</h4>
+  
+app/views/todolists/new.html.erb:2:in `_app_views_todolists_new_html_erb__79066451_918496760540'
+Started GET "/top" for ::1 at 2021-10-10 16:57:12 +0900
+Processing by HomesController#top as HTML
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 332ms (Views: 329.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-10 17:08:13 +0900
+Processing by TodolistsController#new as HTML
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (64.4ms)
+Completed 200 OK in 106ms (Views: 102.0ms | ActiveRecord: 0.0ms)
+
+
