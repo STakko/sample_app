@@ -1953,3 +1953,203 @@ Completed 200 OK in 41ms (Views: 38.5ms | ActiveRecord: 0.2ms | Allocations: 366
 Started GET "/attachments/5ddba1a1ef2533992f6923b1a2df680159bac1c3/store/3437af30a6d694ee50374d35c890e0f866efb42197a83f4a63f7bf06bab6/image.jpeg" for ::1 at 2021-10-11 15:07:44 +0900
 Refile::App: [2021-10-11 15:07:44 +0900] GET "/5ddba1a1ef2533992f6923b1a2df680159bac1c3/store/3437af30a6d694ee50374d35c890e0f866efb42197a83f4a63f7bf06bab6/image.jpeg" 200 7.4ms
 
+Started GET "/todolists/new" for ::1 at 2021-10-11 16:06:12 +0900
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+SyntaxError (C:/Users/taiki/Desktop/sample_app/app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-11 16:07:13 +0900
+  
+SyntaxError (C:/Users/taiki/Desktop/sample_app/app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/" for ::1 at 2021-10-11 16:07:25 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 7.9ms | Allocations: 191)
+Completed 200 OK in 21ms (Views: 10.5ms | ActiveRecord: 0.0ms | Allocations: 2044)
+
+
+Started GET "/top" for ::1 at 2021-10-11 16:07:33 +0900
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.9ms | Allocations: 84)
+  Rendered layout layouts/application.html.erb (Duration: 256.3ms | Allocations: 326340)
+Completed 200 OK in 266ms (Views: 263.7ms | ActiveRecord: 0.0ms | Allocations: 327715)
+
+
+Started GET "/top" for ::1 at 2021-10-11 16:09:34 +0900
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HomesController#top as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering homes/top.html.erb within layouts/application
+  Rendered homes/top.html.erb within layouts/application (Duration: 0.9ms | Allocations: 197)
+  Rendered layout layouts/application.html.erb (Duration: 205.2ms | Allocations: 326462)
+Completed 200 OK in 230ms (Views: 211.1ms | ActiveRecord: 0.0ms | Allocations: 329403)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-11 16:09:50 +0900
+  
+SyntaxError (C:/Users/taiki/Desktop/sample_app/app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end):
+  
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+app/controllers/todolists_controller.rb:36: syntax error, unexpected end-of-input, expecting end
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists/new" for ::1 at 2021-10-11 16:12:20 +0900
+Processing by TodolistsController#new as HTML
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/todolists_controller.rb:3:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (Duration: 4.4ms | Allocations: 994)
+  Rendered layout layouts/application.html.erb (Duration: 61.2ms | Allocations: 35336)
+Completed 200 OK in 80ms (Views: 64.5ms | ActiveRecord: 1.7ms | Allocations: 42250)
+
+
+Started POST "/todolists" for ::1 at 2021-10-11 16:12:22 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ksc6wseowOw6vL/1JAldmTwmBBp0r/VcS8iOXW44GVoI0rIA88ObMoS0OJ0JoiSC5dpmTnzQvCMykjBSUanfHw==", "list"=>{"title"=>"", "body"=>"", "image"=>"{}"}, "commit"=>"投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (Duration: 44.4ms | Allocations: 6328)
+  Rendered layout layouts/application.html.erb (Duration: 115.9ms | Allocations: 40659)
+Completed 200 OK in 120ms (Views: 117.2ms | ActiveRecord: 0.0ms | Allocations: 42016)
+
+
+Started POST "/todolists" for ::1 at 2021-10-11 16:14:39 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IkWjllznRw2qHyhzDINwwKDzIxuehy1dPtyqHLa4SpUAUCtUaIwc0xQXrxshKAnbeQ9BT5b4ZCJHhhQTiSmM0A==", "list"=>{"title"=>"webcamp", "body"=>"", "image"=>"{}"}, "commit"=>"投稿"}
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1725)
+  Rendered layout layouts/application.html.erb (Duration: 33.6ms | Allocations: 36049)
+Completed 200 OK in 35ms (Views: 34.1ms | ActiveRecord: 0.0ms | Allocations: 37226)
+
+
+Started GET "/todolists" for ::1 at 2021-10-11 16:15:55 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/views/todolists/index.html.erb:2
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 9.5ms | Allocations: 5436)
+  Rendered layout layouts/application.html.erb (Duration: 50.9ms | Allocations: 39766)
+Completed 200 OK in 56ms (Views: 51.8ms | ActiveRecord: 1.5ms | Allocations: 41485)
+
+
+Started POST "/todolists" for ::1 at 2021-10-11 16:16:19 +0900
+Processing by TodolistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ksc6wseowOw6vL/1JAldmTwmBBp0r/VcS8iOXW44GVoI0rIA88ObMoS0OJ0JoiSC5dpmTnzQvCMykjBSUanfHw==", "list"=>{"title"=>"webcamp", "body"=>"", "image"=>"{}"}, "commit"=>"投稿"}
+Redirected to http://localhost:3000/todolists/new
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms | Allocations: 1054)
+
+
+Started GET "/todolists/new" for ::1 at 2021-10-11 16:16:19 +0900
+Processing by TodolistsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/new.html.erb within layouts/application
+  Rendered todolists/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 316)
+  Rendered layout layouts/application.html.erb (Duration: 35.7ms | Allocations: 34641)
+Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 35213)
+
+
