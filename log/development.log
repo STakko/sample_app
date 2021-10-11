@@ -2288,3 +2288,329 @@ Processing by TodolistsController#index as HTML
 Completed 200 OK in 93ms (Views: 90.5ms | ActiveRecord: 0.4ms | Allocations: 36897)
 
 
+Started GET "/todolists" for ::1 at 2021-10-11 20:05:37 +0900
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  Rendered todolists/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1944)
+  Rendered layout layouts/application.html.erb (Duration: 4.6ms | Allocations: 2034)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.0ms | Allocations: 5856)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="list-wrap">
+    2: <% @list.each do |list| %>
+    3:   <div class="list-box">
+    4:     <%= attachment_image_tag list, :image, :fill, 200,200, format: "jpeg" %>
+    5:       <div class="list-body">
+  
+app/views/todolists/index.html.erb:2
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-11 20:05:41 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  Rendered todolists/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 1289)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1378)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 1947)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="list-wrap">
+    2: <% @list.each do |list| %>
+    3:   <div class="list-box">
+    4:     <%= attachment_image_tag list, :image, :fill, 200,200, format: "jpeg" %>
+    5:       <div class="list-body">
+  
+app/views/todolists/index.html.erb:2
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-11 20:06:43 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  Rendered todolists/index.html.erb within layouts/application (Duration: 1.5ms | Allocations: 1535)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1621)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms | Allocations: 2946)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="list-wrap">
+    2: <% @Lists.each do |list| %>
+    3:   <div class="list-box">
+    4:     <%= attachment_image_tag list, :image, :fill, 200,200, format: "jpeg" %>
+    5:       <div class="list-body">
+  
+app/views/todolists/index.html.erb:2
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-11 20:06:45 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  Rendered todolists/index.html.erb within layouts/application (Duration: 0.9ms | Allocations: 1287)
+  Rendered layout layouts/application.html.erb (Duration: 2.0ms | Allocations: 1375)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 1923)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass):
+    1: <div class="list-wrap">
+    2: <% @Lists.each do |list| %>
+    3:   <div class="list-box">
+    4:     <%= attachment_image_tag list, :image, :fill, 200,200, format: "jpeg" %>
+    5:       <div class="list-body">
+  
+app/views/todolists/index.html.erb:2
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/todolists" for ::1 at 2021-10-11 20:08:19 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 10.5ms | Allocations: 5714)
+  Rendered layout layouts/application.html.erb (Duration: 396.7ms | Allocations: 339661)
+Completed 200 OK in 405ms (Views: 401.1ms | ActiveRecord: 1.1ms | Allocations: 341002)
+
+
+Started GET "/attachments/24d179193732a13686fb6cea688792565c53faac/store/fill/200/200/3437af30a6d694ee50374d35c890e0f866efb42197a83f4a63f7bf06bab6/image.jpeg" for ::1 at 2021-10-11 20:08:20 +0900
+Refile::App: Error -> You must have ImageMagick or GraphicsMagick installed
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/configuration.rb:139:in `cli'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick.rb:38:in `imagemagick7?'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:135:in `executable'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:110:in `command'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:92:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/tool.rb:38:in `new'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/mini_magick-4.11.0/lib/mini_magick/image.rb:436:in `format'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/refile-mini_magick-0.2.0/lib/refile/mini_magick.rb:134:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/bundler/gems/refile-46b4178654e6/lib/refile/app.rb:57:in `block in <class:App>'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1636:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1636:in `block in compile!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:987:in `block (3 levels) in route!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1006:in `route_eval'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:987:in `block (2 levels) in route!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1035:in `block in process_route'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1033:in `catch'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1033:in `process_route'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:985:in `block in route!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:984:in `each'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:984:in `route!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1098:in `block in dispatch!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `block in invoke'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `catch'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `invoke'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1095:in `dispatch!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:919:in `block in call!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `block in invoke'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `catch'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1072:in `invoke'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:919:in `call!'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:908:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/bundler/gems/refile-46b4178654e6/lib/refile/custom_logger.rb:16:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/xss_header.rb:18:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/path_traversal.rb:16:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/json_csrf.rb:26:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/base.rb:50:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/base.rb:50:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-protection-2.0.8.1/lib/rack/protection/frame_options.rb:31:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/null_logger.rb:11:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:194:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sinatra-2.0.8.1/lib/sinatra/base.rb:1951:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/routing/mapper.rb:20:in `block in <class:Constraints>'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/routing/mapper.rb:49:in `serve'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/journey/router.rb:50:in `block in serve'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/journey/router.rb:32:in `each'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/journey/router.rb:32:in `serve'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/routing/route_set.rb:842:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:27:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/http/permissions_policy.rb:22:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/cookies.rb:689:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activerecord-6.1.4.1/lib/active_record/migration.rb:601:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/callbacks.rb:98:in `run_callbacks'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/actionable_exceptions.rb:18:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/debug_exceptions.rb:29:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+Refile::App: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Refile::App: [2021-10-11 20:08:20 +0900] GET "/24d179193732a13686fb6cea688792565c53faac/store/fill/200/200/3437af30a6d694ee50374d35c890e0f866efb42197a83f4a63f7bf06bab6/image.jpeg" 500 76.0ms
+
+Started GET "/todolists" for ::1 at 2021-10-11 20:10:37 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1425)
+  Rendered layout layouts/application.html.erb (Duration: 59.6ms | Allocations: 35817)
+Completed 200 OK in 72ms (Views: 67.0ms | ActiveRecord: 0.3ms | Allocations: 37143)
+
+
+Started GET "/todolists" for ::1 at 2021-10-11 20:13:52 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1406)
+  Rendered layout layouts/application.html.erb (Duration: 53.4ms | Allocations: 35967)
+Completed 200 OK in 62ms (Views: 59.0ms | ActiveRecord: 0.3ms | Allocations: 37300)
+
+
