@@ -2153,3 +2153,138 @@ Processing by TodolistsController#new as HTML
 Completed 200 OK in 37ms (Views: 36.2ms | ActiveRecord: 0.0ms | Allocations: 35213)
 
 
+Started GET "/todolists/1" for ::1 at 2021-10-11 16:32:19 +0900
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodolistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mList Load (1.0ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:20:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/show.html.erb within layouts/application
+  Rendered todolists/show.html.erb within layouts/application (Duration: 2.5ms | Allocations: 470)
+  Rendered layout layouts/application.html.erb (Duration: 209.0ms | Allocations: 326729)
+Completed 200 OK in 249ms (Views: 216.6ms | ActiveRecord: 1.9ms | Allocations: 335597)
+
+
+Started DELETE "/todolists/1" for ::1 at 2021-10-11 16:32:40 +0900
+  
+ActionController::RoutingError (uninitialized constant TodolistController
+Did you mean?  TodolistsController):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/todolists/1" for ::1 at 2021-10-11 16:34:03 +0900
+  
+ActionController::RoutingError (uninitialized constant TodolistController):
+  
+
+ArgumentError: wrong number of arguments (given 2, expected 3)
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionview-6.1.4.1/lib/action_view/base.rb:230:in `initialize'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `new'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/template.rb:21:in `render'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:37:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:37:in `call_app'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `block in call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `block in tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:37:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/tagged_logging.rb:99:in `tagged'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/rack/logger.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/request_id.rb:26:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/activesupport-6.1.4.1/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/executor.rb:14:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/static.rb:24:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/actionpack-6.1.4.1/lib/action_dispatch/middleware/host_authorization.rb:98:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/railties-6.1.4.1/lib/rails/engine.rb:539:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+	from C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started DELETE "/todolists/1" for ::1 at 2021-10-11 16:35:57 +0900
+Processing by TodolistsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"aLM2XneXH79Dc13744hzDfBDirjpn9rPQ+PFB41TlNVKpr6cQ/xEYf172pPOIwoWKb/o7OHgk7A6uXsIssJSkA==", "id"=>"1"}
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ app/controllers/todolists_controller.rb:34:in `destroy'
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists" WHERE "lists"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/todolists_controller.rb:34:in `destroy'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todolists_controller.rb:35:in `destroy'
+  [1m[36mList Destroy (1.2ms)[0m  [1m[31mDELETE FROM "lists" WHERE "lists"."id" = ?[0m  [["id", 1]]
+  ↳ app/controllers/todolists_controller.rb:35:in `destroy'
+  [1m[36mTRANSACTION (9.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todolists_controller.rb:35:in `destroy'
+Redirected to http://localhost:3000/todolists
+Completed 302 Found in 38ms (ActiveRecord: 12.5ms | Allocations: 7576)
+
+
+Started GET "/todolists" for ::1 at 2021-10-11 16:35:57 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.3ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1178)
+  Rendered layout layouts/application.html.erb (Duration: 73.3ms | Allocations: 35521)
+Completed 200 OK in 77ms (Views: 74.8ms | ActiveRecord: 0.3ms | Allocations: 36372)
+
+
+Started GET "/todolists" for ::1 at 2021-10-11 16:37:05 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.2ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 4.1ms | Allocations: 1054)
+  Rendered layout layouts/application.html.erb (Duration: 65.0ms | Allocations: 35561)
+Completed 200 OK in 73ms (Views: 70.3ms | ActiveRecord: 0.2ms | Allocations: 36906)
+
+
+Started GET "/todolists" for ::1 at 2021-10-11 16:37:32 +0900
+Processing by TodolistsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering todolists/index.html.erb within layouts/application
+  [1m[36mList Load (0.4ms)[0m  [1m[34mSELECT "lists".* FROM "lists"[0m
+  ↳ app/views/todolists/index.html.erb:2
+  Rendered todolists/index.html.erb within layouts/application (Duration: 6.7ms | Allocations: 1053)
+  Rendered layout layouts/application.html.erb (Duration: 83.0ms | Allocations: 35563)
+Completed 200 OK in 93ms (Views: 90.5ms | ActiveRecord: 0.4ms | Allocations: 36897)
+
+
